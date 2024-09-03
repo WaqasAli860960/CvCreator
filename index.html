@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create Your Professional CV</h1>
+        <form id="cvForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="skills">Skills:</label>
+            <div id="skillsContainer">
+                <input type="text" name="skills" placeholder="e.g., HTML, CSS, JavaScript" required>
+            </div>
+            <button type="button" id="addSkill">Add Another Skill</button>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" placeholder="e.g., BS Computer Science" required>
+
+            <!-- <label for="experience">Abou me :</label>
+            <textarea id="experience" name="experience" placeholder="Describe your experience..." required></textarea> -->
+            <label for="experience">Experience / About Me:</label>
+<div id="experienceContainer">
+    <textarea id="experience" name="experience" placeholder="Describe your experience..." required></textarea>
+</div>
+<button type="button" id="addHeading">Add Heading</button>
+
+            <label for="language">Languages:</label>
+            <input type="text" id="language" name="language" placeholder="e.g., English, Urdu" required>
+
+            <label for="profilePic">Profile Picture:</label>
+            <input type="file" id="profilePic" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="cvPopup" class="popup">
+        <div class="popup-content">
+            <button onclick="window.print()">Print</button>
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="cvPreview">
+                <!-- CV will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
